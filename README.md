@@ -30,7 +30,7 @@ $ brew install tmux
 * [General Usage](#general-usage)
 * [Shortcuts](#shortcuts)
 
-01. General Usage
+General Usage
 =================
 
 * Start a tmux session with
@@ -39,7 +39,7 @@ $ brew install tmux
 ```
 * Select text in a tmux window with your mouse by holding the `SHIFT` key (Windows) or the `OPTIONS` key (Mac) and then using the mouse as you'd normally do
 
-02. Shortcuts
+Shortcuts
 =============
 
 | Key(s)  | Description |
