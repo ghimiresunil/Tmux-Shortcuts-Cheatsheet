@@ -31,6 +31,8 @@ $ brew install tmux
 * [Shortcuts](#shortcuts)
 * [Commands](#commands)
 * [Scripting tmux](#scripting-tmux)
+* [Configuring tmux](#configuring-tmux)
+* [Further Resources](#further-resources)
 
 General Usage
 -------------
@@ -111,4 +113,63 @@ tmux select-window -t session:1
 tmux -2 attach-session -t cflogs
 ```
 
+Configuring Tmux
+---------------
+  
+You can configure tmux via the `~/.tmux.conf` file. After making changes to the config file, you can update the configuration "on-the-fly" with
+```
+    tmux source ~/.tmux.conf
+```
 
+---------------------------
+Changing the default prefix
+---------------------------
+
+Use 
+
+``` sh
+set -g prefix C-a
+```
+
+to change the default prefix from `CTRL` + `b` to `CTRL` + `a`. Optionally you can "free" the default binding with
+
+``` sh
+unbind C-b
+```
+
+------------
+Key Bindings
+------------
+
+You can add / alter tmux's key bindings with the following command
+
+``` sh
+bind | split-window -h
+```
+
+this binds the `split window -h` command to the `|` key.
+
+---------------------------------
+Adding Mouse Support for Mac OS X
+---------------------------------
+
+In order to have mouse support in Mac OS X, you can add the following lines to your config file:
+
+``` sh
+set -g mode-mouse on
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mouse-select-window on
+```
+----------------
+Further Resources
+----------------
+
+* [tmuxinator](https://github.com/tmuxinator/tmuxinator)
+* [tmux shortcuts & cheatsheet](https://gist.github.com/MohamedAlaa/2961058)
+* [tmux tutorial - part 1](http://blog.hawkhost.com/2010/06/28/tmux-the-terminal-multiplexer/)
+* [tmux tutorial - part 2](http://blog.hawkhost.com/2010/07/02/tmux-%E2%80%93-the-terminal-multiplexer-part-2/)
+* [Mouse support in OS X](http://www.davidverhasselt.com/enable-mouse-support-in-tmux-on-os-x/)
+* [(Video) Basic tmux Tutorial - Windows, Panes, and Sessions over SSH tutoriaLinux - Part 1](https://www.youtube.com/watch?v=BHhA_ZKjyxo)
+* [(Video) Basic tmux Tutorial, Part 2 -- Shared Sessions](https://www.youtube.com/watch?v=norO25P7xHg)
+* [tmux scripting - blog post](http://blog.htbaa.com/news/tmux-scripting)
