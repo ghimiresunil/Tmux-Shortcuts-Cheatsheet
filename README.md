@@ -29,9 +29,10 @@ $ brew install tmux
 **Table of contents**
 * [General Usage](#general-usage)
 * [Shortcuts](#shortcuts)
+* [Commands](#commands)
 
 General Usage
-=================
+-------------
 
 * Start a tmux session with
 ```
@@ -40,7 +41,7 @@ General Usage
 * Select text in a tmux window with your mouse by holding the `SHIFT` key (Windows) or the `OPTIONS` key (Mac) and then using the mouse as you'd normally do
 
 Shortcuts
-=============
+---------
 
 | Key(s)  | Description |
 | :-----: | ----------- |
@@ -64,4 +65,11 @@ Shortcuts
 | | **Working with Sessions** |
 | `d` | detach from session |
 
+Commands
+--------
 
+| Command | Description |
+| ------- | ----------- |
+| tmux -s <SESSION NAME> | creates a new session with name `<SESSION NAME>` |
+| tmux list-sessions | lists all currently running tmux sessions |
+| tmux attach -t <SESSION NAME> | attach to the session called `<SESSION NAME>` |
