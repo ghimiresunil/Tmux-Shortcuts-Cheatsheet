@@ -26,20 +26,42 @@ $ brew install tmux
 ===============================
 
 
-## Table of contents
-====================
+**Table of contents**
 * [General Usage](#general-usage)
+* [Shortcuts](#shortcuts)
 
-General Usage
-=============
+01. General Usage
+=================
 
 * Start a tmux session with
 ```
-tmux
+  tmux
 ```
 * Select text in a tmux window with your mouse by holding the `SHIFT` key (Windows) or the `OPTIONS` key (Mac) and then using the mouse as you'd normally do
 
+02. Shortcuts
+=============
 
-
+| Key(s)  | Description |
+| :-----: | ----------- |
+| `CTRL`+`b` `<command>` | sends `<command>` to tmux instead of sending it to the shell |
+| | **General Commands** |
+| `?` | shows a list of all commands (`q`closes the list) |
+| `:` | enter a tmux command |
+| | **Working with Windows** |
+| `c` | creates a new window |
+| `,` | rename current window |
+| `p` | switch to previous window |
+| `n` | switch to next window |
+| `w` | list windows (and then select with arrow keys) |
+| | **Working with Panes** |
+| `%`          | split window vertically |
+| `-`          | split window horizontally <br> requires `bind - split-window -v` in our `.tmux.conf` |
+| →          | go to right pane |
+| ←          | go to left pane |
+| ↑          | go to upper pane |
+| ↓          | go to lower pane |
+| | **Working with Sessions** |
+| `d` | detach from session |
 
 
