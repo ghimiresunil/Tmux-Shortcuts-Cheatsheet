@@ -30,6 +30,7 @@ $ brew install tmux
 * [General Usage](#general-usage)
 * [Shortcuts](#shortcuts)
 * [Commands](#commands)
+* [Scripting tmux](#scripting-tmux)
 
 General Usage
 -------------
@@ -73,3 +74,11 @@ Commands
 | tmux -s <SESSION NAME> | creates a new session with name `<SESSION NAME>` |
 | tmux list-sessions | lists all currently running tmux sessions |
 | tmux attach -t <SESSION NAME> | attach to the session called `<SESSION NAME>` |
+  
+Scripting Tmux
+-------------
+ 
+--------------------------------------------
+Starting multiple commands in multiple panes
+--------------------------------------------
+
