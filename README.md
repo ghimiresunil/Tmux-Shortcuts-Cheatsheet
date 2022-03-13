@@ -82,3 +82,33 @@ Scripting Tmux
 Starting multiple commands in multiple panes
 --------------------------------------------
 
+  Start a new tmux session with `tmux` before running the script!
+
+``` sh
+# start a new tmux session and detach from it
+tmux new-session -d -s session1
+
+tmux rename-window 'my window'
+tmux send-keys 'echo "pane 1"' C-m
+
+tmux select-window -t session1:0
+tmux split-window -h
+tmux send-keys 'echo "pane 2"' C-m
+
+tmux split-window -h
+tmux send-keys 'echo "pane 3"' C-m
+
+# we want to have notifications in the status bar, if there are changes in the windows
+tmux setw -g monitor-activity on
+tmux set -g visual-activity on
+
+tmux select-layout even-horizontal
+
+# select the first window to be in the foreground
+tmux select-window -t session:1
+
+# attach our terminal to the tmux session
+tmux -2 attach-session -t cflogs
+```
+
+
