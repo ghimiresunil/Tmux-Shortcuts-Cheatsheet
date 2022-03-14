@@ -35,7 +35,7 @@ $ brew install tmux
 * [Further Resources](#further-resources)
 
 General Usage
--------------
+=============
 
 * Start a tmux session with
 ```
@@ -44,7 +44,7 @@ General Usage
 * Select text in a tmux window with your mouse by holding the `SHIFT` key (Windows) or the `OPTIONS` key (Mac) and then using the mouse as you'd normally do
 
 Shortcuts
----------
+=========
 
 | Key(s)  | Description |
 | :-----: | ----------- |
@@ -69,7 +69,7 @@ Shortcuts
 | `d` | detach from session |
 
 Commands
---------
+========
 
 | Command | Description |
 | ------- | ----------- |
@@ -78,7 +78,7 @@ Commands
 | tmux attach -t <SESSION NAME> | attach to the session called `<SESSION NAME>` |
   
 Scripting Tmux
--------------
+==============
  
 --------------------------------------------
 Starting multiple commands in multiple panes
@@ -114,7 +114,7 @@ tmux -2 attach-session -t cflogs
 ```
 
 Configuring Tmux
----------------
+================
   
 You can configure tmux via the `~/.tmux.conf` file. After making changes to the config file, you can update the configuration "on-the-fly" with
 ```
@@ -161,9 +161,9 @@ set -g mouse-resize-pane on
 set -g mouse-select-pane on
 set -g mouse-select-window on
 ```
-----------------
+
 Further Resources
-----------------
+=================
 
 * [tmuxinator](https://github.com/tmuxinator/tmuxinator)
 * [tmux shortcuts & cheatsheet](https://gist.github.com/MohamedAlaa/2961058)
